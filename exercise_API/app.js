@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const Post = require("./api/models/posts");
 var multer = require('multer');
+
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './uploads')
     },
     filename: function (req, file, cb) {
-      cb(null, `${file.filename}-${Date.now()}${getExt(file.mimeType)}`)
+      cb(null, `${file.filename}-${Date.now()}${getExt(file.mimetype)}`)
     }
 })
 
