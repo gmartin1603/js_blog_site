@@ -19,7 +19,7 @@ header {
     position: relative;
 }
 
-.home-page header {
+.home-page header, .new-post-page header {
     background-image: url(/assets/banner.jpeg);
 }
 
@@ -63,7 +63,7 @@ header::after {
 }
 
 
-.profile-name {
+.profile-name, title {
     font-size: x-large;
     font-weight: bold;
 }

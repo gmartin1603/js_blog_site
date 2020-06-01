@@ -9,7 +9,7 @@ var storage = multer.diskStorage({
       cb(null, './uploads')
     },
     filename: function (req, file, cb) {
-      cb(null, `${file.filename}-${Date.now()}${getExt(file.mimetype)}`)
+      cb(null, `${"post-image"}-${Date.now()}${getExt(file.mimetype)}`)
     }
 })
 
